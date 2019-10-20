@@ -1,23 +1,72 @@
-header {
-  width: 100%;
-  height: 100%;
-  background-color: #191919;
+body {
+  background-color: #131313;
 }
 
-header .head-wrap {
+.upper {
+  text-transform: uppercase;
+}
+
+header,
+footer {
+  width: 100%;
+  height: 100%;
+}
+
+header .head-wrap,
+footer .head-wrap {
+  position: relative;
   max-width: 1440px;
   height: 790px;
   margin: 0 auto;
-  background: #191919 url(./assets/banner.png) no-repeat right bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-blend-mode: multiply;
+  background: url(./assets/banner.png) no-repeat right bottom;
 }
 
-header nav {
+header .top,
+footer .top {
   width: 1256px;
   height: 10%;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header nav ul {
+header aside,
+footer aside {
+  min-width: 82px;
+  height: 707px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header aside span,
+footer aside span {
+  font-family: FuturaDemiC;
+  font-size: 14px;
+  line-height: 16px;
+  color: #E3B873;
+  margin: 0 auto;
+  -webkit-transform: rotate(90deg);
+}
+
+header nav,
+footer nav {
+  margin-left: 95px;
+  width: 582px;
+}
+
+header nav ul,
+footer nav ul {
   height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,17 +75,423 @@ header nav ul {
       justify-content: space-around;
 }
 
+header nav ul a,
+footer nav ul a {
+  text-decoration: none;
+  font-family: FuturaBookC;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+header nav ul a:first-child,
+footer nav ul a:first-child {
+  color: #E3B873;
+}
+
+header .logo,
+footer .logo {
+  font-family: FuturaDemiC;
+  font-size: 14px;
+  line-height: 16px;
+  color: #E3B873;
+}
+
+header .number,
+footer .number {
+  font-family: FuturaDemiC;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #E3B873;
+  margin-left: 3%;
+}
+
+header .call-button,
+footer .call-button {
+  width: 167px;
+  height: 37px;
+  background-color: #E3B873;
+  margin-left: 5%;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border-radius: 2px;
+}
+
+header .call-button p,
+footer .call-button p {
+  font-family: FuturaDemiC;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+header .text,
+footer .text {
+  position: absolute;
+  top: 30%;
+  margin-left: 2%;
+}
+
+header .text > div,
+footer .text > div {
+  width: 518px;
+  height: 108px;
+}
+
+header .text > div h1,
+footer .text > div h1 {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 53px;
+  color: #FFF;
+}
+
+header .text > div h1 span,
+footer .text > div h1 span {
+  color: #E3B873;
+}
+
+header .text p,
+footer .text p {
+  margin-top: 20px;
+  font-family: FuturaBookC;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFF;
+  max-width: 500px;
+  max-height: 89px;
+}
+
+header .buttons,
+footer .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8%;
+}
+
+header .buttons .calculate,
+footer .buttons .calculate {
+  width: 208px;
+  height: 52px;
+  background: #E3B873;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  border-radius: 2px;
+  margin-right: 5%;
+}
+
+header .buttons .calculate p,
+footer .buttons .calculate p {
+  font-family: FuturaDemiC;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #FFF;
+}
+
+header .buttons .submit,
+footer .buttons .submit {
+  width: 208px;
+  height: 52px;
+  border: 1px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+}
+
+header .buttons .submit p,
+footer .buttons .submit p {
+  font-family: FuturaDemiC;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #FFF;
+}
+
+header .scroll,
+footer .scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 247px;
+  height: 97px;
+  background-color: #131313;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+header .scroll p,
+footer .scroll p {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFF;
+}
+
+header .scroll button,
+footer .scroll button {
+  margin-left: 8%;
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/down.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  outline: none;
+}
+
 .block2 {
-  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/banner-vector.svg) repeat-x;
+}
+
+.block2-wrap {
+  max-width: 1240px;
   height: 1074px;
   margin: 0 auto;
-  background: url(./assets/banner-vector.svg) repeat-x;
+  display: -webkit-box;
+  padding-top: 128px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* .slider {
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        //  margin-top: 185px;
+        border-radius: 50%;
+        background: #E3B873 url(./assets/right.svg) no-repeat center;
+        box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+    }*/
+}
+
+.block2-wrap .example {
+  width: 442px;
+  height: 590px;
+}
+
+.block2-wrap .example > h1 {
+  width: 253px;
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 37px;
+  letter-spacing: -0.07em;
+  color: #E3B873;
+}
+
+.block2-wrap .example > p {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 29px;
+  color: #FFF;
+}
+
+.block2-wrap .example .props {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.block2-wrap .example .props div {
+  padding-top: 10%;
+}
+
+.block2-wrap .example .props div p {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFF;
+}
+
+.block2-wrap .example .props div p:nth-child(1) {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+
+.block2-wrap .example .slider {
+  width: 206px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 34%;
+}
+
+.block2-wrap .example .slider div {
+  background: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.block2-wrap .example .slider :nth-child(3) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.block2-wrap .example .slider :nth-child(4) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.block2-wrap .example .slider img:last-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.block2-wrap .projects {
+  padding-left: 5%;
+}
+
+.block2-wrap .projects nav {
+  margin-top: -6%;
+}
+
+.block2-wrap .projects nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.block2-wrap .projects nav ul > :first-child {
+  color: #E3B873;
+  padding: 2px;
+  border-bottom: 1px solid #E3B873;
+}
+
+.block2-wrap .projects nav ul a {
+  text-decoration: none;
+  margin-right: 60px;
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #FFF;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.block2-wrap .projects .pictures {
+  margin-top: 2%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block2-wrap .projects .pictures:after {
+  content: '';
+  width: 55px;
+  height: 55px;
+  z-index: 2;
+  top: 50px;
+  right: 0;
+  border-radius: 50%;
+  background: #E3B873 url(./assets/right.svg) no-repeat center;
+  -webkit-box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+          box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+}
+
+.block2-wrap .projects .pictures img {
+  padding-right: 5%;
+}
+
+.block2-wrap .cam {
+  width: 196px;
+  height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 65%;
+  right: 50%;
+}
+
+.block2-wrap .cam h1 {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.block2-wrap .cam img {
+  margin: 0 auto;
+}
+
+.block2-wrap .cam .vid {
+  width: 817px;
+  height: 434px;
+  margin: 0 auto;
+}
+
+.white {
+  background-color: #fff;
 }
 
 .white-wrap {
   width: 1440px;
   height: 1864px;
   margin: 0 auto;
+}
+
+.white-wrap > div {
+  width: 682px;
+  margin: 0 auto;
+  margin-top: 33%;
+}
+
+.white-wrap > div p {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
 }
 
 .fantasies {
@@ -84,6 +539,181 @@ header nav ul {
   width: 1440px;
   height: 954px;
   margin: 0 auto;
+  position: relative;
+  background: url(./assets/map.png) no-repeat center 95%;
+}
+
+.map .map-wrap .ques {
+  position: absolute;
+  width: 883px;
+  height: 446px;
+  background-color: #181818;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.map .map-wrap .ques h1 {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFF;
+  margin-top: 4%;
+}
+
+.map .map-wrap .ques form {
+  position: relative;
+  width: 520px;
+  height: 308px;
+  margin: 0 auto;
+  margin-top: 5%;
+  overflow: hidden;
+}
+
+.map .map-wrap .ques form input {
+  background-color: #181818;
+  border: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 8px;
+}
+
+.map .map-wrap .ques form input::-webkit-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFF;
+}
+
+.map .map-wrap .ques form input:-ms-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFF;
+}
+
+.map .map-wrap .ques form input::-ms-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFF;
+}
+
+.map .map-wrap .ques form input::placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFF;
+}
+
+.map .map-wrap .ques form label p {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: unset;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.map .map-wrap .ques form label:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.map .map-wrap .ques form label:first-child input {
+  padding-right: 50%;
+}
+
+.map .map-wrap .ques form label:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 50%;
+}
+
+.map .map-wrap .ques form label:nth-child(2) input {
+  padding-right: 50%;
+}
+
+.map .map-wrap .ques form label:nth-child(3) {
+  position: absolute;
+  top: 30%;
+}
+
+.map .map-wrap .ques form label:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 60%;
+}
+
+.map .map-wrap .ques form label:nth-child(4) p {
+  font-family: FuturaBookC;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFF;
+}
+
+.map .map-wrap .ques form label[for="in3"] input {
+  padding-right: 200%;
+}
+
+.map .map-wrap .ques form button {
+  background-color: #E3B873;
+  -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+          box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+  padding: 20px 54px;
+  border: none;
+  font-family: FuturaDemiC;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  color: #FFF;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 4%;
+}
+
+.map .map-wrap .cont {
+  padding-top: 18%;
+}
+
+.map .map-wrap p {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #E3B873;
+}
+
+.map .map-wrap .icons {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 2%;
+}
+
+.map .map-wrap .icons img {
+  border-radius: 50%;
+  background-color: #E3B873;
+  padding: 7px;
+}
+
+.map .map-wrap .icons img:last-child {
+  padding: 8px 6px;
 }
 
 footer {
@@ -91,8 +721,14 @@ footer {
 }
 
 footer .foot-wrap {
-  width: 1440px;
+  width: 1256px;
   height: 134px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
