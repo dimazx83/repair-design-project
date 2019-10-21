@@ -6,6 +6,12 @@ body {
   text-transform: uppercase;
 }
 
+input,
+button {
+  outline: none;
+  border-style: none;
+}
+
 header,
 footer {
   width: 100%;
@@ -21,7 +27,6 @@ footer .head-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-blend-mode: multiply;
   background: url(./assets/banner.png) no-repeat right bottom;
 }
 
@@ -119,14 +124,19 @@ footer .call-button {
   -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   border-radius: 2px;
-}
-
-header .call-button p,
-footer .call-button p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
   font-family: FuturaDemiC;
   font-size: 13px;
   line-height: 15px;
-  text-align: center;
   text-transform: uppercase;
   color: #FFF;
 }
@@ -187,15 +197,12 @@ footer .buttons .calculate {
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
   border-radius: 2px;
   margin-right: 5%;
-}
-
-header .buttons .calculate p,
-footer .buttons .calculate p {
   font-family: FuturaDemiC;
   font-size: 13px;
   line-height: 15px;
   text-align: center;
   color: #FFF;
+  cursor: pointer;
 }
 
 header .buttons .submit,
@@ -206,10 +213,8 @@ footer .buttons .submit {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 2px;
-}
-
-header .buttons .submit p,
-footer .buttons .submit p {
+  background-color: transparent;
+  cursor: pointer;
   font-family: FuturaDemiC;
   font-size: 13px;
   line-height: 15px;
@@ -263,7 +268,8 @@ footer .scroll button {
 .block2 {
   width: 100%;
   height: 100%;
-  background: url(./assets/banner-vector.svg) repeat-x;
+  background: url(./assets/back-line.png);
+  background-size: cover;
 }
 
 .block2-wrap {
@@ -412,26 +418,22 @@ footer .scroll button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* &:after {
+                content: '';
+                width: 55px;
+                height: 55px;
+                // position: absolute;
+                z-index: 2;
+                top: 50px;
+                right: 0;
+                //  margin-top: 185px;
+                border-radius: 50%;
+                background: #E3B873 url(./assets/right.svg) no-repeat center;
+                box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+            }*/
 }
 
-.block2-wrap .projects .pictures:after {
-  content: '';
-  width: 55px;
-  height: 55px;
-  z-index: 2;
-  top: 50px;
-  right: 0;
-  border-radius: 50%;
-  background: #E3B873 url(./assets/right.svg) no-repeat center;
-  -webkit-box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
-          box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
-}
-
-.block2-wrap .projects .pictures img {
-  padding-right: 5%;
-}
-
-.block2-wrap .cam {
+.cam {
   width: 196px;
   height: 68px;
   display: -webkit-box;
@@ -450,7 +452,7 @@ footer .scroll button {
   right: 50%;
 }
 
-.block2-wrap .cam h1 {
+.cam h1 {
   font-family: Yeseva One;
   font-style: normal;
   font-weight: normal;
@@ -461,37 +463,393 @@ footer .scroll button {
   color: #FFF;
 }
 
-.block2-wrap .cam img {
-  margin: 0 auto;
-}
-
-.block2-wrap .cam .vid {
-  width: 817px;
-  height: 434px;
+.cam img {
   margin: 0 auto;
 }
 
 .white {
   background-color: #fff;
+  width: 100%;
+  height: 100%;
 }
 
 .white-wrap {
   width: 1440px;
-  height: 1864px;
+  height: auto;
   margin: 0 auto;
 }
 
-.white-wrap > div {
+.white-wrap .vid {
+  position: relative;
+}
+
+.white-wrap .vid video {
+  width: 817px;
+  height: 434px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.white-wrap .vid button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: #E3B873 url(./assets/play.svg) no-repeat center;
+}
+
+.white-wrap .cam-text {
   width: 682px;
   margin: 0 auto;
-  margin-top: 33%;
+  padding-top: 22%;
+  background: url(./assets/line-wh.svg) no-repeat center 60%;
 }
 
-.white-wrap > div p {
+.white-wrap .cam-text p {
   font-family: FuturaBookC;
   font-size: 20px;
   line-height: 34px;
   text-align: center;
+}
+
+.white-wrap form {
+  padding-top: 5%;
+  width: 770px;
+  height: 102px;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.white-wrap form input {
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  padding-bottom: 6px;
+  padding-right: 30%;
+}
+
+.white-wrap form input::-webkit-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+
+.white-wrap form input:-ms-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+
+.white-wrap form input::-ms-input-placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+
+.white-wrap form input::placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+
+.white-wrap form label p {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(54, 54, 54, 0.5);
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.white-wrap form label:nth-child(4) {
+  padding-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.white-wrap form label:nth-child(4) p {
+  font-family: FuturaBookC;
+  font-size: 16px;
+  line-height: 22px;
+  color: #181818;
+}
+
+.white-wrap form button {
+  background-color: #E3B873;
+  -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+          box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+  width: 200px;
+  height: 51px;
+  border: none;
+  font-family: FuturaDemiC;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.white-wrap .repair {
+  width: 190px;
+  height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+.white-wrap .repair h1 {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #181818;
+}
+
+.white-wrap .repair img {
+  margin: 0 auto;
+}
+
+.white-wrap .images {
+  width: 1236px;
+  height: 608px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: url(./assets/rep1.png) no-repeat left 12%, url(./assets/rep2.png) no-repeat center 12%, url(./assets/rep3.png) no-repeat right 12%;
+}
+
+.white-wrap .images .txt {
+  position: relative;
+  width: 330px;
+  height: 286px;
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  top: 50%;
+}
+
+.white-wrap .images .txt .inn-txt {
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+.white-wrap .images .txt .inn-txt > p {
+  margin-left: -5%;
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #363636;
+}
+
+.white-wrap .images .txt .inn-txt ul {
+  list-style-type: disc;
+}
+
+.white-wrap .images .txt .inn-txt ul li {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 25px;
+  color: #959595;
+}
+
+.white-wrap .images .txt .orange {
+  position: absolute;
+  width: 228px;
+  height: 54px;
+  background: #E3B873;
+  -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+          box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.white-wrap .images .txt .orange p {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.white-wrap .free {
+  width: 506px;
+  height: 510px;
+  margin: 16% 0 0 auto;
+  background: #131313 url(./assets/free-line.png);
+  -webkit-box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+}
+
+.white-wrap .free h1 {
+  font-family: FuturaDemiC;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  padding-top: 5%;
+  color: #FFF;
+}
+
+.white-wrap .free form {
+  display: block;
+  margin: 0 auto;
+  padding: 10%;
+  height: 274px;
+  width: auto;
+}
+
+.white-wrap .free form label {
+  display: block;
+  padding-bottom: 8%;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.white-wrap .free form label:nth-child(3) {
+  padding-bottom: 4%;
+}
+
+.white-wrap .free form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 8px;
+  padding-right: 100%;
+}
+
+.white-wrap .free form input::-webkit-input-placeholder {
+  font-family: FuturaMediumC;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFF;
+}
+
+.white-wrap .free form input:-ms-input-placeholder {
+  font-family: FuturaMediumC;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFF;
+}
+
+.white-wrap .free form input::-ms-input-placeholder {
+  font-family: FuturaMediumC;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFF;
+}
+
+.white-wrap .free form input::placeholder {
+  font-family: FuturaMediumC;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFF;
+}
+
+.white-wrap .free form label p {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: unset;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.white-wrap .free form label:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+.white-wrap .free form label:nth-child(4) p {
+  font-family: FuturaBookC;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFF;
+}
+
+.white-wrap .free form button {
+  background-color: #E3B873;
+  -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+          box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+  width: 213px;
+  height: 51px;
+  border: none;
+  font-family: FuturaDemiC;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  color: #FFF;
+  position: absolute;
+  bottom: -12%;
+  right: 8%;
 }
 
 .fantasies {
@@ -504,8 +862,47 @@ footer .scroll button {
   margin: 0 auto;
 }
 
+.fantasies .fantasies-wrap .text2 {
+  margin-left: 8%;
+  padding-top: 10%;
+  width: 630px;
+}
+
+.fantasies .fantasies-wrap .text2 h1 {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 37px;
+  color: #E3B873;
+  margin-bottom: 5%;
+}
+
+.fantasies .fantasies-wrap .text2 ul {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.fantasies .fantasies-wrap .text2 ul li:first-child {
+  color: #E3B873;
+  border-bottom: 1px solid #E3B873;
+}
+
+.fantasies .fantasies-wrap .text2 ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Proxima Nova;
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 8%;
+  color: #FFF;
+}
+
 .variants {
   height: 622px;
+  background-color: #FFF;
 }
 
 .variants .variants-wrap {
@@ -514,8 +911,140 @@ footer .scroll button {
   margin: 0 auto;
 }
 
+.variants .variants-wrap .design {
+  width: 190px;
+  height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+.variants .variants-wrap .design h1 {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #181818;
+}
+
+.variants .variants-wrap .design img {
+  margin: 0 auto;
+}
+
+.variants .variants-wrap .inn-tx {
+  width: 760px;
+  margin: 0 auto;
+}
+
+.variants .variants-wrap .inn-tx p {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #363636;
+}
+
+.variants .variants-wrap .images2 {
+  width: 1236px;
+  height: 608px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: url(./assets/rep1.png) no-repeat left 12%, url(./assets/rep3.png) no-repeat center 12%, url(./assets/tel.png) no-repeat right 12%;
+}
+
+.variants .variants-wrap .images2 .txt2 {
+  position: relative;
+  width: 330px;
+  height: 286px;
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 50%;
+}
+
+.variants .variants-wrap .images2 .txt2 .inn-txt2 {
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+.variants .variants-wrap .images2 .txt2 .inn-txt2 > p {
+  margin-left: -5%;
+  margin-bottom: 2%;
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #363636;
+}
+
+.variants .variants-wrap .images2 .txt2 .inn-txt2 ul {
+  list-style-type: disc;
+  margin-bottom: 17%;
+}
+
+.variants .variants-wrap .images2 .txt2 .inn-txt2 ul li {
+  font-family: FuturaBookC;
+  font-size: 15px;
+  line-height: 25px;
+  color: #959595;
+}
+
+.variants .variants-wrap .images2 .txt2 .orange2 {
+  position: absolute;
+  width: 228px;
+  height: 54px;
+  background: #E3B873;
+  -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+          box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  padding-left: 5%;
+}
+
+.variants .variants-wrap .images2 .txt2 .orange2 p {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
 .steps {
-  background: #191919;
+  background: #191919 url(./assets/back-line.png) no-repeat;
+  background-size: cover;
 }
 
 .steps .steps-wrap {
@@ -547,7 +1076,8 @@ footer .scroll button {
   position: absolute;
   width: 883px;
   height: 446px;
-  background-color: #181818;
+  background: #181818 url(./assets/free-line.png) no-repeat;
+  background-size: cover;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -574,9 +1104,9 @@ footer .scroll button {
 }
 
 .map .map-wrap .ques form input {
-  background-color: #181818;
+  background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding-bottom: 8px;
 }
 
@@ -620,23 +1150,21 @@ footer .scroll button {
 
 .map .map-wrap .ques form label:first-child {
   position: absolute;
-  top: 0;
   left: 0;
 }
 
 .map .map-wrap .ques form label:first-child input {
-  padding-right: 50%;
+  padding-right: 40%;
 }
 
 .map .map-wrap .ques form label:nth-child(2) {
   position: absolute;
-  top: 0;
   right: 0;
-  margin-right: 50%;
 }
 
 .map .map-wrap .ques form label:nth-child(2) input {
-  padding-right: 50%;
+  margin-left: -10%;
+  padding-right: 40%;
 }
 
 .map .map-wrap .ques form label:nth-child(3) {
@@ -645,11 +1173,19 @@ footer .scroll button {
 }
 
 .map .map-wrap .ques form label:nth-child(4) {
+  left: 0;
+  right: 0;
+  bottom: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  top: 60%;
 }
 
 .map .map-wrap .ques form label:nth-child(4) p {
@@ -660,14 +1196,15 @@ footer .scroll button {
 }
 
 .map .map-wrap .ques form label[for="in3"] input {
-  padding-right: 200%;
+  padding-right: 300%;
 }
 
 .map .map-wrap .ques form button {
   background-color: #E3B873;
   -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
           box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
-  padding: 20px 54px;
+  width: 200px;
+  height: 51px;
   border: none;
   font-family: FuturaDemiC;
   font-size: 15px;
@@ -676,9 +1213,9 @@ footer .scroll button {
   outline: none;
   cursor: pointer;
   color: #FFF;
-  position: absolute;
+  display: block;
   margin: 0 auto;
-  bottom: 4%;
+  margin-top: 48%;
 }
 
 .map .map-wrap .cont {

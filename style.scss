@@ -8,20 +8,25 @@ body {
     text-transform: uppercase;
 }
 
+input,
+button {
+    outline: none;
+    border-style: none;
+}
+
 header,
 footer {
     width: 100%;
     height: 100%;
 
     .head-wrap {
+
         position: relative;
         max-width: 1440px;
         height: 790px;
         margin: 0 auto;
         display: flex;
-        background-blend-mode: multiply;
-        background: url(./assets/banner.png) no-repeat right bottom //, rgba(0, 0, 0, 0.7);
-            //  background-color: rgba(0, 0, 0, 0.7);
+        background: url(./assets/banner.png) no-repeat right bottom;
     }
 
     .top {
@@ -29,7 +34,6 @@ footer {
         height: 10%;
         display: flex;
         align-items: center;
-        // position: relative;
     }
 
     aside {
@@ -90,7 +94,7 @@ footer {
         text-decoration-line: underline;
         color: $text-color-orange;
         margin-left: 3%;
-        // margin-right: 5%;
+
     }
 
     .call-button {
@@ -100,16 +104,18 @@ footer {
         margin-left: 5%;
         box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
         border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        p {
-            font-family: FuturaDemiC;
-            font-size: 13px;
-            line-height: 15px;
-            text-align: center;
-            text-transform: uppercase;
+        cursor: pointer;
+        font-family: FuturaDemiC;
+        font-size: 13px;
+        line-height: 15px;
+        text-transform: uppercase;
 
-            color: $text-color-white;
-        }
+        color: $text-color-white;
+
 
     }
 
@@ -159,13 +165,14 @@ footer {
             border-radius: 2px;
             margin-right: 5%;
 
-            p {
-                font-family: FuturaDemiC;
-                font-size: 13px;
-                line-height: 15px;
-                text-align: center;
-                color: $text-color-white;
-            }
+
+            font-family: FuturaDemiC;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            color: $text-color-white;
+            cursor: pointer;
+
         }
 
         .submit {
@@ -174,14 +181,15 @@ footer {
             border: 1px solid #FFFFFF;
             box-sizing: border-box;
             border-radius: 2px;
+            background-color: transparent;
+            cursor: pointer;
 
-            p {
-                font-family: FuturaDemiC;
-                font-size: 13px;
-                line-height: 15px;
-                text-align: center;
-                color: $text-color-white;
-            }
+            font-family: FuturaDemiC;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            color: $text-color-white;
+
         }
     }
 
@@ -224,7 +232,8 @@ footer {
 .block2 {
     width: 100%;
     height: 100%;
-    background: url(./assets/banner-vector.svg) repeat-x;
+    background: url(./assets/back-line.png);
+    background-size: cover;
 }
 
 .block2-wrap {
@@ -351,7 +360,7 @@ footer {
             position: absolute;
             display: flex;
 
-            &:after {
+            /* &:after {
                 content: '';
                 width: 55px;
                 height: 55px;
@@ -363,12 +372,12 @@ footer {
                 border-radius: 50%;
                 background: #E3B873 url(./assets/right.svg) no-repeat center;
                 box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
-            }
+            }*/
 
             // margin-top: 5%;
             // justify-content: flex-end;
             img {
-                padding-right: 5%;
+                // padding-right: 5%;
                 // box-shadow:#fff 0 50px 30;
                 //  position: relative;
 
@@ -376,43 +385,7 @@ footer {
         }
     }
 
-    .cam {
-        width: 196px;
-        height: 68px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        top: 65%;
-        right: 50%;
 
-        // margin: 0 auto;
-        // position: relative;
-        //  top: 100%;
-        h1 {
-            font-family: Yeseva One;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 28px;
-            text-align: center;
-            text-transform: uppercase;
-            color: $text-color-white;
-        }
-
-        img {
-            margin: 0 auto;
-        }
-
-        .vid {
-            width: 817px;
-            height: 434px;
-            margin: 0 auto;
-
-            video {}
-        }
-    }
 
     /* .slider {
         width: 55px;
@@ -425,19 +398,77 @@ footer {
     }*/
 }
 
+.cam {
+    width: 196px;
+    height: 68px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 65%;
+    right: 50%;
+
+
+    h1 {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $text-color-white;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+
+}
+
 .white {
     background-color: #fff;
+    width: 100%;
+    height: 100%;
 }
 
 .white-wrap {
     width: 1440px;
-    height: 1864px;
+    height: auto;
     margin: 0 auto;
 
-    >div {
+    .vid {
+        position: relative;
+
+        video {
+            width: 817px;
+            height: 434px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: $text-color-orange url(./assets/play.svg) no-repeat center;
+
+        }
+    }
+
+    .cam-text {
         width: 682px;
         margin: 0 auto;
-        margin-top: 33%;
+        padding-top: 22%;
+        background: url(./assets/line-wh.svg) no-repeat center 60%;
 
         p {
             font-family: FuturaBookC;
@@ -447,7 +478,267 @@ footer {
         }
     }
 
-    .circle {}
+    form {
+        padding-top: 5%;
+        width: 770px;
+        height: 102px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(54, 54, 54, .3);
+            padding-bottom: 6px;
+            padding-right: 30%;
+        }
+
+        input::placeholder {
+            font-family: FuturaBookC;
+            font-size: 18px;
+            line-height: 24px;
+            color: #363636;
+        }
+
+        label p {
+            font-family: FuturaBookC;
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(54, 54, 54, 0.5);
+            text-align: left;
+            margin-bottom: 4px;
+        }
+
+        label:nth-child(4) {
+            padding-top: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-family: FuturaBookC;
+                font-size: 16px;
+                line-height: 22px;
+
+                color: #181818;
+            }
+        }
+
+        button {
+            background-color: $text-color-orange;
+            box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+            width: 200px;
+            height: 51px;
+            border: none;
+            font-family: FuturaDemiC;
+            font-size: 15px;
+            line-height: 26px;
+            text-align: center;
+            outline: none;
+            cursor: pointer;
+            color: $text-color-white;
+        }
+    }
+
+    .repair {
+        width: 190px;
+        height: 68px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 auto;
+        margin-top: 8%;
+
+
+        h1 {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #181818;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+    }
+
+    .images {
+        width: 1236px;
+        height: 608px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        background: url(./assets/rep1.png) no-repeat left 12%,
+            url(./assets/rep2.png) no-repeat center 12%,
+            url(./assets/rep3.png) no-repeat right 12%;
+
+        .txt {
+            position: relative;
+            width: 330px;
+            height: 286px;
+            background-color: $text-color-white;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+            top: 50%;
+
+            .inn-txt {
+                margin-top: 5%;
+                margin-left: 8%;
+
+                >p {
+                    margin-left: -5%;
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 25px;
+
+                    color: #363636;
+                }
+
+                ul {
+                    list-style-type: disc;
+
+                    li {
+                        font-family: FuturaBookC;
+                        font-size: 15px;
+                        line-height: 25px;
+                        color: #959595;
+                    }
+                }
+            }
+
+
+            .orange {
+                position: absolute;
+                width: 228px;
+                height: 54px;
+                background: $text-color-orange;
+                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: translateY(50%);
+
+                p {
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    color: $text-color-white;
+                }
+            }
+        }
+    }
+
+    .free {
+        width: 506px;
+        height: 510px;
+        margin: 16% 0 0 auto;
+        background: #131313 url(./assets/free-line.png);
+        box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+
+        h1 {
+            font-family: FuturaDemiC;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            padding-top: 5%;
+            color: $text-color-white;
+        }
+
+        form {
+            display: block;
+            margin: 0 auto;
+            padding: 10%;
+            height: 274px;
+            width: auto;
+
+            label {
+                display: block;
+                padding-bottom: 8%;
+                padding-top: 0;
+                overflow: hidden;
+
+            }
+
+            label:nth-child(3) {
+                padding-bottom: 4%;
+            }
+
+            input {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+                padding-bottom: 8px;
+                padding-right: 100%;
+
+            }
+
+            input::placeholder {
+                font-family: FuturaMediumC;
+                font-size: 18px;
+                line-height: 25px;
+                color: $text-color-white;
+            }
+
+            label p {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 20px;
+                color: rgba(255, 255, 255, 0.5);
+                line-height: unset;
+                text-align: left;
+                margin-bottom: 8px;
+            }
+
+            label:nth-child(4) {
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+
+                p {
+                    font-family: FuturaBookC;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $text-color-white;
+                }
+            }
+
+
+            button {
+                background-color: $text-color-orange;
+                box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+                width: 213px;
+                height: 51px;
+                border: none;
+                font-family: FuturaDemiC;
+                font-size: 15px;
+                line-height: 26px;
+                text-align: center;
+                outline: none;
+                cursor: pointer;
+                color: $text-color-white;
+                position: absolute;
+                bottom: -12%;
+                right: 8%;
+            }
+        }
+    }
 }
 
 .fantasies {
@@ -457,21 +748,175 @@ footer {
         width: 1440px;
         height: 864px;
         margin: 0 auto;
+
+        .text2 {
+            margin-left: 8%;
+            padding-top: 10%;
+            width: 630px;
+
+            h1 {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 27px;
+                line-height: 37px;
+                color: $text-color-orange;
+                margin-bottom: 5%;
+            }
+
+            ul {
+                width: fit-content;
+
+                li:first-child {
+                    color: $text-color-orange;
+                    border-bottom: 1px solid $text-color-orange;
+                }
+
+                li {
+                    width: fit-content;
+                    font-family: Proxima Nova;
+                    font-size: 20px;
+                    line-height: 34px;
+                    margin-bottom: 8%;
+                    color: $text-color-white;
+                }
+            }
+        }
+
     }
 }
 
 .variants {
     height: 622px;
+    background-color: $text-color-white;
 
     .variants-wrap {
         width: 1440px;
         height: 622px;
         margin: 0 auto;
+
+        .design {
+            width: 190px;
+            height: 68px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 10%;
+
+
+            h1 {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #181818;
+            }
+
+            img {
+                margin: 0 auto;
+            }
+
+        }
+
+        .inn-tx {
+            width: 760px;
+            margin: 0 auto;
+
+            p {
+                font-family: FuturaBookC;
+                font-size: 20px;
+                line-height: 27px;
+                text-align: center;
+
+                color: #363636;
+            }
+        }
+
+        .images2 {
+            width: 1236px;
+            height: 608px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            background: url(./assets/rep1.png) no-repeat left 12%,
+                url(./assets/rep3.png) no-repeat center 12%,
+                url(./assets/tel.png) no-repeat right 12%;
+
+            .txt2 {
+                position: relative;
+                width: 330px;
+                height: 286px;
+                background-color: $text-color-white;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+                height: fit-content;
+                top: 50%;
+
+                .inn-txt2 {
+                    margin-top: 5%;
+                    margin-left: 8%;
+
+                    >p {
+                        margin-left: -5%;
+                        margin-bottom: 2%;
+                        font-family: Yeseva One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 25px;
+
+                        color: #363636;
+                    }
+
+                    ul {
+                        list-style-type: disc;
+                        margin-bottom: 17%;
+
+                        li {
+                            font-family: FuturaBookC;
+                            font-size: 15px;
+                            line-height: 25px;
+                            color: #959595;
+                        }
+                    }
+                }
+
+
+                .orange2 {
+                    position: absolute;
+                    width: 228px;
+                    height: 54px;
+                    background: $text-color-orange;
+                    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                    bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    transform: translateY(50%);
+                    padding-left: 5%;
+
+                    p {
+                        font-family: Yeseva One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 25px;
+                        text-transform: uppercase;
+                        color: $text-color-white;
+                    }
+                }
+            }
+        }
     }
 }
 
 .steps {
-    background: #191919;
+    background: #191919 url(./assets/back-line.png) no-repeat;
+    background-size: cover;
 
     .steps-wrap {
         width: 1440px;
@@ -502,7 +947,8 @@ footer {
             position: absolute;
             width: 883px;
             height: 446px;
-            background-color: #181818;
+            background: #181818 url(./assets/free-line.png) no-repeat;
+            background-size: cover;
             left: 50%;
             transform: translate(-50%, -50%);
 
@@ -526,9 +972,9 @@ footer {
                 overflow: hidden;
 
                 input {
-                    background-color: #181818;
+                    background-color: transparent;
                     border: none;
-                    border-bottom: 1px solid white;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
                     padding-bottom: 8px;
                 }
 
@@ -551,21 +997,21 @@ footer {
 
                 label:first-child {
                     position: absolute;
-                    top: 0;
                     left: 0;
-                    input{
-                        padding-right: 50%;
+
+                    input {
+                        padding-right: 40%;
                     }
                 }
 
                 label:nth-child(2) {
                     position: absolute;
-                    top: 0;
                     right: 0;
-                    input{
-                        padding-right: 50%;
+
+                    input {
+                        margin-left: -10%;
+                        padding-right: 40%;
                     }
-                    margin-right: 50%;
                 }
 
                 label:nth-child(3) {
@@ -574,10 +1020,13 @@ footer {
                 }
 
                 label:nth-child(4) {
+                    left: 0;
+                    right: 0;
+                    bottom: 30%;
                     display: flex;
-                   // text-align: center;
+                    align-items: center;
+                    justify-content: center;
                     position: absolute;
-                    top: 60%;
 
                     p {
                         font-family: FuturaBookC;
@@ -586,17 +1035,18 @@ footer {
                         color: $text-color-white;
                     }
                 }
-                
+
 
                 label[for="in3"] input {
-                    padding-right: 200%;
+                    padding-right: 300%;
                 }
 
-                
+
                 button {
                     background-color: $text-color-orange;
                     box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
-                    padding: 20px 54px;
+                    width: 200px;
+                    height: 51px;
                     border: none;
                     font-family: FuturaDemiC;
                     font-size: 15px;
@@ -605,9 +1055,9 @@ footer {
                     outline: none;
                     cursor: pointer;
                     color: $text-color-white;
-                    position: absolute;
+                    display: block;
                     margin: 0 auto;
-                    bottom: 4%;
+                    margin-top: 48%;
                 }
             }
         }
