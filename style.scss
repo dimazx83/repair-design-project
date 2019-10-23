@@ -1,4 +1,5 @@
 @import 'config';
+@import 'fonts';
 
 body {
     background-color: #131313;
@@ -41,6 +42,7 @@ footer {
         height: 707px;
         display: flex;
         align-items: center;
+        background: url(./assets/insta-l.svg) no-repeat center 62%;
 
         span {
             font-family: FuturaDemiC;
@@ -87,13 +89,16 @@ footer {
     }
 
     .number {
+text-decoration: none;
         font-family: FuturaDemiC;
         font-size: 14px;
         line-height: 16px;
         text-align: right;
         text-decoration-line: underline;
-        color: $text-color-orange;
         margin-left: 3%;
+        a{
+            color: $text-color-orange;
+        }
 
     }
 
@@ -234,6 +239,8 @@ footer {
     height: 100%;
     background: url(./assets/back-line.png);
     background-size: cover;
+    overflow:hidden;
+
 }
 
 .block2-wrap {
@@ -243,6 +250,7 @@ footer {
     display: -webkit-box;
     padding-top: 128px;
     box-sizing: border-box;
+    position: relative;
 
     .example {
         width: 442px;
@@ -269,12 +277,17 @@ footer {
 
         .props {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+           // flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 10%;
 
+            .props-1>div:first-child{
+                margin-bottom: 24%;
+            }
+            .props-2>div:first-child{
+                margin-bottom: 34%;
+            }
             div {
-                padding-top: 10%;
-
                 p {
                     font-family: FuturaBookC;
                     font-size: 15px;
@@ -282,7 +295,9 @@ footer {
 
                     color: $text-color-white;
                 }
-
+                p:last-child{
+                    width: 55%;
+                }
                 p:nth-child(1) {
                     font-family: Yeseva One;
                     font-style: normal;
@@ -324,7 +339,7 @@ footer {
     }
 
     .projects {
-        padding-left: 5%;
+        padding-left: 3%;
 
         nav {
 
@@ -360,42 +375,32 @@ footer {
             position: absolute;
             display: flex;
 
-            /* &:after {
-                content: '';
+            
+            img {
+                 padding-right: 2%;
+                 box-shadow:#fff 0 50px 30;
+
+            }
+            img:last-child{
+padding-right: 0;
+            }
+            .slider2 {
                 width: 55px;
                 height: 55px;
-                // position: absolute;
-                z-index: 2;
-                top: 50px;
-                right: 0;
-                //  margin-top: 185px;
+                position: absolute;
+                left:60%;
+                top:50%;
+                transform: translateY(-50%);
                 border-radius: 50%;
                 background: #E3B873 url(./assets/right.svg) no-repeat center;
                 box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
-            }*/
-
-            // margin-top: 5%;
-            // justify-content: flex-end;
-            img {
-                // padding-right: 5%;
-                // box-shadow:#fff 0 50px 30;
-                //  position: relative;
-
             }
         }
     }
 
 
 
-    /* .slider {
-        width: 55px;
-        height: 55px;
-        position: absolute;
-        //  margin-top: 185px;
-        border-radius: 50%;
-        background: #E3B873 url(./assets/right.svg) no-repeat center;
-        box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
-    }*/
+     
 }
 
 .cam {
@@ -405,10 +410,10 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 65%;
-    right: 50%;
-
+    position: absolute;
+    top: 67%;
+    left:50%;
+    transform:translateX(-50%);
 
     h1 {
         font-family: Yeseva One;
@@ -420,22 +425,27 @@ footer {
         text-transform: uppercase;
         color: $text-color-white;
     }
-
+    picture{
+        display: flex;
+       
+    }
     img {
-        margin: 0 auto;
+        margin:0 5px;
+       // margin: 0 auto;
     }
 
 }
 
 .white {
-    background-color: #fff;
+    background: #fff url(./assets/wh-back.png) no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
 }
 
 .white-wrap {
     width: 1440px;
-    height: auto;
+    height: 2576px;
     margin: 0 auto;
 
     .vid {
@@ -495,7 +505,7 @@ footer {
             padding-bottom: 6px;
             padding-right: 30%;
         }
-
+       
         input::placeholder {
             font-family: FuturaBookC;
             font-size: 18px;
@@ -565,9 +575,13 @@ footer {
             text-transform: uppercase;
             color: #181818;
         }
-
+        picture{
+            display: flex;
+           
+        }
         img {
-            margin: 0 auto;
+            margin:0 5px;
+
         }
 
     }
@@ -643,14 +657,95 @@ footer {
         }
     }
 
+    .circle {
+        margin-left: -16%;
+        margin-top: 15%;
+        width: 637px;
+        height: 637px;
+        border-radius: 50%;
+        border: 1px solid $text-color-orange;
+        position: relative;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            
+            width: 42px;
+            height: 42px;
+            border: 10px solid $text-color-white;
+            background-color: $text-color-orange;
+            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+            border-radius: 30px;
+
+            p {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+                color: $text-color-white;
+            }
+        }
+        >p{
+            position: absolute;
+
+            font-family: FuturaMediumC;
+font-size: 18px;
+line-height: 21px;
+
+color: #363636;
+        }
+        :nth-child(1){
+            top: 5%;
+            right: 14%;
+        }
+        :nth-child(2){
+            width: 364px;
+            left:88%;
+            top:7%;
+        }
+        :nth-child(3){
+            top: 22%;
+            right: 1%;
+        }
+        :nth-child(4){
+            left:100%;
+            top:23%;
+        }
+        :nth-child(5){
+            top: 50%;
+            right: -5%;
+        }
+        :nth-child(6){
+            left:106%;
+            top:51%;
+        }
+        :nth-child(7){
+            top: 68%;
+            right: 0%;
+        }
+        :nth-child(8){
+            width: 225px;
+            left:100%;
+            top:70%;
+        }
+    }
+
     .free {
         width: 506px;
         height: 510px;
-        margin: 16% 0 0 auto;
+        margin: 36% 0 0 auto;
         background: #131313 url(./assets/free-line.png);
         box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+        right:8%;
+        bottom:42%;
 
         h1 {
+            margin: 0 auto;
+            width: 50%;
             font-family: FuturaDemiC;
             font-size: 20px;
             line-height: 25px;
@@ -748,6 +843,8 @@ footer {
         width: 1440px;
         height: 864px;
         margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
 
         .text2 {
             margin-left: 8%;
@@ -762,6 +859,7 @@ footer {
                 line-height: 37px;
                 color: $text-color-orange;
                 margin-bottom: 5%;
+                padding-right: 25%;
             }
 
             ul {
@@ -781,6 +879,20 @@ footer {
                     color: $text-color-white;
                 }
             }
+        }
+
+        img:last-child {
+            margin-top: 5%;
+        }
+
+        .img1 {
+            width: 354px;
+            margin-right: 2%;
+            margin-top: -3%;
+        }
+
+        .img2 {
+            margin-top: -7%;
         }
 
     }
@@ -803,7 +915,7 @@ footer {
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            padding-top: 10%;
+            padding-top: 8%;
 
 
             h1 {
@@ -816,9 +928,12 @@ footer {
                 text-transform: uppercase;
                 color: #181818;
             }
-
+            picture{
+                display: flex;
+               
+            }
             img {
-                margin: 0 auto;
+                margin:0 5px;
             }
 
         }
@@ -843,10 +958,9 @@ footer {
             margin: 0 auto;
             display: flex;
             justify-content: space-around;
-            background: url(./assets/rep1.png) no-repeat left 12%,
-                url(./assets/rep3.png) no-repeat center 12%,
-                url(./assets/tel.png) no-repeat right 12%;
-
+            margin-top: 4%;
+          
+           
             .txt2 {
                 position: relative;
                 width: 330px;
@@ -854,11 +968,19 @@ footer {
                 background-color: $text-color-white;
                 box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
                 height: fit-content;
-                top: 50%;
-
+                margin: 0 auto;
+                margin-top:-30%;
+                
+                .im{
+                    width: 392px;
+                    height: 421px;
+                    overflow: hidden;
+                  
+                }
                 .inn-txt2 {
-                    margin-top: 5%;
-                    margin-left: 8%;
+                   padding-top: 6%;
+                    padding-left: 10%;
+                    padding-bottom: 1%;
 
                     >p {
                         margin-left: -5%;
@@ -922,13 +1044,493 @@ footer {
         width: 1440px;
         height: 1616px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        background: url(./assets/lin.png) no-repeat 86% 60%;
+        position: relative;
+
+        .headee {
+            padding-top: 27%;
+            margin-left: 8%;
+            width: 337px;
+            height: fit-content;
+
+            h2 {
+                font-family: FuturaDemiC;
+                font-size: 15px;
+                line-height: 21px;
+                text-transform: uppercase;
+                color: $text-color-white;
+                margin-bottom: 2%;
+            }
+
+            h1 {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 27px;
+                line-height: 37px;
+                text-transform: uppercase;
+                width: 64%;
+                color: $text-color-orange;
+            }
+
+            img {
+                position: absolute;
+                bottom: 71%;
+                left: 20%;
+            }
+
+            .def {
+                margin-top: 28%;
+
+                h3 {
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    margin-bottom: 1%;
+                    color: $text-color-white;
+                }
+
+                h2 {
+                    display:inline-block;
+                    width: 78%;
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 23px;
+                    text-transform: uppercase;
+                    margin-bottom: 4%;
+                    color: $text-color-orange;
+                }
+
+                p {
+                   // width: 45%;
+                    font-family: FuturaBookC;
+                    font-size: 15px;
+                    line-height: 25px;
+                    margin-bottom: 1%;
+                    color: $text-color-white;
+                }
+
+                .slider2 {
+                    width: 287px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 42%;
+
+                    div {
+                        background: rgba(255, 255, 255, 0.3);
+                        ;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                    }
+
+                    :nth-child(2) {
+                        background: $text-color-white;
+                    }
+
+                    img {
+                        position: static;
+                    }
+
+                    img:last-child {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+        }
+
+        .men {
+            height: 179px;
+            padding-top: 32%;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 18%;
+
+            section:first-child div:first-child {
+                opacity: 1;
+            }
+
+            p {
+                width: fit-content;
+
+            }
+
+            p:first-child {
+                border-bottom: 2px solid $text-color-orange;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 21px;
+                text-transform: uppercase;
+                margin-bottom: 8%;
+                color: $text-color-white;
+            }
+
+            p:last-child {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 18px;
+
+                color: $text-color-white;
+            }
+
+            section {
+                padding-right: 36%;
+            }
+            
+            div {
+                opacity: .3;
+                margin-bottom: 58%;
+            }
+
+            section:first-child {
+                width: 128px;
+            }
+
+            section:nth-child(2) {
+                width: 136px;
+            }
+
+            section:last-child {
+                width: 100px;
+                padding-right: 0%;
+
+            }
+
+            p {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 18px;
+
+                color: $text-color-white;
+            }
+        }
+
+        .team-head {
+            position: absolute;
+           width: 190px;
+            height: 68px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+           
+left:50%;
+            transform:translateX(-50%);
+            margin-top: 84%;
+    
+    
+            h1 {
+                width: 240px;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                text-transform: uppercase;
+                color: $text-color-white;
+            }
+            picture{
+                display: flex;
+               
+            }
+            img {
+                margin:0 5px;
+            }
+           
+        }
+        .team-txt{
+            top: 80%;
+            position: absolute;
+            width: 476px;
+            font-family: FuturaBookC;
+font-size: 20px;
+line-height: 28px;
+left:50%;
+            transform:translateX(-50%);
+            text-align: center;
+color:$text-color-white;
+        }
     }
 }
 
 .team {
+    background: #fff url(./assets/wh-back.png) no-repeat;
+    background-size: cover;
     .team-wrap {
-        width: 1440px;
-        height: 1516px;
+        width: 1240px;
+        height: 1524px;
+        margin: 0 auto;
+        position: relative;
+
+        .pictures {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        picture {
+            position: relative;
+            top:0;
+            transform: translateY(-50%);
+            height: fit-content;
+
+            .o {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                top: 0;
+                left: 0;
+                transform: translate(-50%, -50%);
+            }
+
+            .o1 {
+                background: $text-color-orange url(./assets/idea.svg) no-repeat center;
+            }
+
+            .o2 {
+                background: $text-color-orange url(./assets/sud.svg) no-repeat center;
+            }
+
+            .o3 {
+                background: $text-color-orange url(./assets/portfolio.svg) no-repeat center;
+            }
+
+            .wh {
+                width: 233px;
+                height: 93px;
+                position: absolute;
+                background-color: $text-color-white;
+                bottom: -6%;
+                left: 50%;
+                transform: translateX(-50%);
+                padding-top: 12%;
+
+                h2 {
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-align: center;
+
+                    color: #181818;
+                }
+
+                p {
+                    font-family: FuturaBookC;
+                    font-size: 18px;
+                    line-height: 26px;
+                    text-align: center;
+
+                    color: #959595;
+                }
+            }
+
+            .or {
+                width: 233px;
+                height: 44px;
+                background-color: $text-color-orange;
+                position: absolute;
+                bottom: 0%;
+                left: 50%;
+                transform: translate(-50%, 145%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 13px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    color: $text-color-white;
+                }
+            }
+        }
+
+        .em-txt {
+            margin: 0 auto;
+            background: url(./assets/line-wh.svg) no-repeat center 0%;
+            width: 556px;
+            margin-top: -5%;
+    padding-top: 3%;
+
+            p {
+
+                font-family: FuturaBookC;
+                font-size: 20px;
+                line-height: 34px;
+                text-align: center;
+
+                color: #363636;
+
+            }
+        }
+
+        .cli {
+            width: 140px;
+            height: 68px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto;
+            margin-top: 6%;
+
+
+            h1 {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #181818;
+            }
+            picture{
+                display: flex;
+                margin-top: 18%;
+               
+            }
+            img {
+                margin:0 5px;
+            }
+
+        }
+
+        >p {
+
+            width: 30%;
+            margin: 0 auto;
+            //margin-top: 2%;
+            font-family: FuturaBookC;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: center;
+            color: #363636;
+        }
+
+        .clients {
+            width: 1236px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+margin-top: 3%;
+            >div {
+                box-sizing:border-box;
+                width: 376px;
+                height: 456px;
+                background-color: #fff;
+                position: relative;
+                padding-top: 2%;
+            }
+
+            .photo {
+                width: 76px;
+                height: 76px;
+                border-radius: 50%;
+                                margin-left:5%;
+
+            }
+
+            .ph1 {
+                background: url(./assets/cli1.png) no-repeat center;
+            }
+
+            .ph2 {
+                background: url(./assets/cli2.png) no-repeat center;
+            }
+
+            .ph3 {
+                background: url(./assets/cli3.png) no-repeat center;
+            }
+
+            picture {
+                display: flex;
+                align-items: center;
+                margin-top: 10%;
+
+
+                h1 {
+                    margin-left: 5%;
+                    width: 178px;
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 23px;
+                    color: #181818;
+                }
+            }
+
+            p {
+                width: 325px;
+                text-transform: lowercase;
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 180%;
+                /* or 27px */
+                margin-left:5%;
+                color: #959595;
+            }
+
+            p:first-letter {
+                text-transform: uppercase;
+            }
+
+            .char {
+                widows: inherit;
+                position: absolute;
+                bottom: 0;
+                transform: translateY(50%);
+                display: flex;
+
+                div {
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 18%;
+                    box-sizing: border-box;
+
+                    >p {
+                        font-family: Yeseva One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 17px;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        color: $text-color-white;
+                    }
+                }
+
+                div:first-child {
+                    width: 136px;
+                    border-right: 0.75px solid $text-color-white;
+                    background: $text-color-orange url(./assets/40m2.svg) no-repeat 8% center;
+                }
+
+                div:last-child {
+                    width: 158px;
+                    background: $text-color-orange url(./assets/48days.svg) no-repeat 8% center;
+                }
+            }
+        }
+
     }
 }
 
@@ -950,7 +1552,7 @@ footer {
             background: #181818 url(./assets/free-line.png) no-repeat;
             background-size: cover;
             left: 50%;
-            transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
 
             h1 {
                 font-family: Yeseva One;
