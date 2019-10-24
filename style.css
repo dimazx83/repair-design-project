@@ -190,8 +190,8 @@ footer .call-button {
 header .text,
 footer .text {
   position: absolute;
-  top: 30%;
-  margin-left: 2%;
+  top: 35%;
+  margin-left: 10%;
 }
 
 header .text > div,
@@ -333,6 +333,10 @@ footer .scroll button {
 .block2-wrap .example {
   width: 442px;
   height: 590px;
+}
+
+.block2-wrap .example picture {
+  display: none;
 }
 
 .block2-wrap .example > h1 {
@@ -607,7 +611,7 @@ footer .scroll button {
 
 .white-wrap form input {
   border: none;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  border-bottom: 1px solid #FFF;
   padding-bottom: 6px;
   padding-right: 30%;
 }
@@ -1017,6 +1021,36 @@ footer .scroll button {
   position: absolute;
   bottom: -12%;
   right: 8%;
+}
+
+.white-wrap .cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  bottom: 40%;
+  left: 58%;
+  width: 440px;
+}
+
+.white-wrap .cost div {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #E3B873 url(./assets/cost.svg) no-repeat center;
+}
+
+.white-wrap .cost p {
+  padding-left: 5%;
+  width: 310px;
+  font-family: FuturaDemiC;
+  font-size: 20px;
+  line-height: 25px;
+  color: #E3B873;
+  text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
 }
 
 .fantasies {
@@ -2003,5 +2037,291 @@ footer .foot-wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+/****media*****/
+@media screen and (max-width: 375px) {
+  body {
+    background-color: #252525;
+  }
+  header,
+  .head-wrap {
+    max-width: 375px;
+  }
+  header .head-wrap,
+  .head-wrap .head-wrap {
+    background-position: center;
+    height: 533px;
+  }
+  header aside,
+  header .top nav,
+  header .call-button,
+  header .scroll,
+  .head-wrap aside,
+  .head-wrap .top nav,
+  .head-wrap .call-button,
+  .head-wrap .scroll {
+    display: none;
+  }
+  header .top,
+  .head-wrap .top {
+    height: 57px;
+    background-color: #252525;
+    padding: 0 18px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .top .logo,
+  header .top .number,
+  .head-wrap .top .logo,
+  .head-wrap .top .number {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  header .top .number,
+  .head-wrap .top .number {
+    margin: unset;
+  }
+  header .top .number a,
+  .head-wrap .top .number a {
+    color: #FFF;
+  }
+  header .text,
+  .head-wrap .text {
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: unset;
+  }
+  header .text div,
+  .head-wrap .text div {
+    margin: unset;
+    width: 330px;
+    height: unset;
+  }
+  header .text h1,
+  .head-wrap .text h1 {
+    font-size: 23px;
+    line-height: 132.83%;
+    /* or 31px */
+  }
+  header .text p,
+  .head-wrap .text p {
+    width: unset;
+    width: 80%;
+    font-size: 18px;
+    line-height: 135.84%;
+  }
+  header .text .buttons,
+  .head-wrap .text .buttons {
+    display: block;
+  }
+  header .text .buttons button,
+  .head-wrap .text .buttons button {
+    width: 339px;
+    margin: unset;
+    margin-bottom: 8%;
+  }
+  .block2 {
+    background: none;
+  }
+  .block2-wrap {
+    height: 870px;
+    padding-top: 10%;
+  }
+  .block2-wrap .example {
+    width: unset;
+    height: unset;
+  }
+  .block2-wrap .example picture {
+    display: block;
+    position: relative;
+    width: 340px;
+    height: 242px;
+    margin: 0 auto;
+    margin-top: 5%;
+    background: url(./assets/props.png) no-repeat center;
+  }
+  .block2-wrap .example picture .slider2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+  }
+  .block2-wrap .example picture .slider2 div {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 5%;
+    background: #E3B873 url(./assets/right.svg) no-repeat center;
+  }
+  .block2-wrap .example picture .slider2 div:first-child {
+    background: #E3B873 url(./assets/left.svg) no-repeat center;
+    margin-left: 5%;
+    margin-right: unset;
+  }
+  .block2-wrap .example .slider {
+    display: none;
+  }
+  .block2-wrap .example h1 {
+    width: 34%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 138.6%;
+    /* or 30px */
+    letter-spacing: -0.07em;
+    margin-bottom: 5%;
+  }
+  .block2-wrap .example p {
+    padding: 0 32px;
+    font-size: 14px;
+    line-height: 158.48%;
+    /* or 22px */
+    text-align: center;
+  }
+  .block2-wrap .example .props div p {
+    text-align: left;
+  }
+  .block2-wrap .example .props .props-2 > div:first-child {
+    margin-bottom: 24%;
+  }
+  .block2-wrap .example .props div p:nth-child(1) {
+    font-size: 14px;
+    line-height: 138.6%;
+    /* identical to box height, or 19px */
+  }
+  .block2-wrap .example .props div p:last-child {
+    font-size: 14px;
+    line-height: 135.84%;
+    /* or 19px */
+  }
+  .block2-wrap .cam {
+    margin: 0 auto;
+    padding: 0 76px;
+    width: 224px;
+    bottom: 14%;
+    top: auto;
+  }
+  .block2-wrap .cam h1 {
+    font-size: 22px;
+    line-height: 138.6%;
+    /* or 30px */
+  }
+  .white {
+    background: none;
+  }
+  .white-wrap {
+    width: 375px;
+  }
+  .white-wrap .circle, .white-wrap .free, .white-wrap .cost {
+    display: none;
+  }
+  .white-wrap .vid {
+    top: 0%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .white-wrap .vid video {
+    width: 340px;
+    height: 207px;
+    -webkit-transform: unset;
+            transform: unset;
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+  .white-wrap .vid button {
+    width: 37px;
+    height: 37px;
+    background-size: 13px 13px;
+    top: 50%;
+  }
+  .white-wrap .cam-text {
+    background-position: center 0%;
+    width: unset;
+    padding: 0 16px;
+    margin-top: -20%;
+    padding-top: 10%;
+  }
+  .white-wrap .cam-text p {
+    font-size: 14px;
+    line-height: 169.8%;
+    /* or 24px */
+    color: #FFF;
+  }
+  .white-wrap form {
+    display: block;
+    width: 375px;
+    padding: 0 18px;
+    margin-top: 5%;
+    height: unset;
+  }
+  .white-wrap form label {
+    display: block;
+    margin-bottom: 14%;
+  }
+  .white-wrap form label p {
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .white-wrap form label input {
+    background-color: transparent;
+    padding-right: 50%;
+  }
+  .white-wrap form label input::-webkit-input-placeholder {
+    color: #FFF;
+  }
+  .white-wrap form label input:-ms-input-placeholder {
+    color: #FFF;
+  }
+  .white-wrap form label input::-ms-input-placeholder {
+    color: #FFF;
+  }
+  .white-wrap form label input::placeholder {
+    color: #FFF;
+  }
+  .white-wrap form label:nth-child(4) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    margin-top: -34%;
+  }
+  .white-wrap form label:nth-child(4) p {
+    color: #FFF;
+  }
+  .white-wrap form button {
+    margin-top: 10%;
+    width: 340px;
+    -webkit-box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+            box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .white-wrap .repair {
+    margin-top: 28%;
+  }
+  .white-wrap .repair h1 {
+    color: #FFF;
+  }
+  .white-wrap .images {
+    width: unset;
+    height: unset;
+    display: block;
+    background-position: center top, center, center bottom;
+  }
 }
 /*# sourceMappingURL=style.css.map */
